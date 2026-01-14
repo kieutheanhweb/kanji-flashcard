@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>漢字フラッシュカード</title>
+    <!-- CSS  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ページの見出し -->
+    <h1>漢字フラッシュカード</h1>
+
+    <!-- =========================
+       フラッシュカード全体
+       ========================= -->
+    <!-- カードをクリックすると裏返る -->
+    <div class="card" id="card">
+      <!-- 回転する部分 -->
+      <div class="inner" id="inner">
+        <!-- 表側：漢字を表示 -->
+        <div class="front" id="front">漢字</div>
+
+        <!-- 裏側：意味を表示 -->
+        <div class="back" id="back">意味</div>
+      </div>
+    </div>
+
+    <!-- =========================
+       次のカードへ進むボタン
+       ========================= -->
+    <!-- クリックすると nextCard() 関数が実行される -->
+    <button onclick="nextCard()">次へ</button>
+
+    <!-- =========================
+       新しい漢字を追加するエリア
+       ========================= -->
+    <div class="input-area">
+      <!-- セクションのタイトル -->
+      <h3>新しい漢字を追加</h3>
+
+      <!-- 漢字入力欄 -->
+      <input id="kanjiInput" placeholder="漢字" />
+
+      <!-- 意味入力欄 -->
+      <input id="meaningInput" placeholder="意味（日本語）" />
+
+      <!-- 追加ボタン -->
+      <!-- クリックすると addCard() 関数が実行される -->
+      <button onclick="addCard()">追加</button>
+    </div>
+
+    <!-- =========================
+       データを全て削除するボタン
+       ========================= -->
+    <!-- localStorage のデータを削除 -->
+    <button class="btn-clear" onclick="resetCards()">データクリア</button>
+
+    <!--script-->
+    <script src="script.js"></script>
+  </body>
+</html>
